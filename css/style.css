@@ -1,15 +1,17 @@
 body
 {
-	background-color: #C1C1C1;
+	background-color: #A1A1A1;
 }
 
 h2
 {
-	color: red;
-	font-size: 1.2em;
+	color: brown;
+	font-size: 1em;
+	text-align: center;
 }
 
 /* ###################### */
+/* Barre de vie */
 .lifeBar, .manaBar
 {
 	width: 250px;
@@ -44,4 +46,65 @@ h2
 	height: 100%;
 	width: 100%;
 	background-color: #2800B0;
+}
+
+.actions
+{
+	color: brown;
+	text-decoration: underline;
+}
+/* ###################### */
+/* Affichage des stats personnages */
+
+.statistiquesPerso
+{
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: auto;
+	display: flex;
+	justify-content: space-around;
+}
+
+.afficheAllActions
+{
+	margin-top: 250px;
+	width: 100%;
+	text-align: center;
+}
+
+/* ###################### */
+/* Plateau de jeu */
+.plateau
+{
+	width: 480px;
+	height: 480px;
+	margin: auto;
+	margin-top: 5%;
+	background-color: white;
+	outline: 1px solid black;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.cases, .casesPosition, .casesEvent, .casesEventWin
+{
+	width: 40px;
+	height: 40px;
+	outline: 0.2px solid black;
+}
+
+.casesPosition
+{
+	background-color: red;
+}
+
+.casesEvent
+{
+	background-color: green;
+}
+
+.casesEventWin
+{
+	background-color: yellow;
 }

@@ -10,19 +10,54 @@
 		<?php include("class/personnage.php"); ?>
 
 		<?php
-			$player1 = new Personnage();
-			$player2 = new Personnage();
+			$joueur1 = new Personnage();
+			$joueur2 = new Personnage();
+
+			$grille = new Personnage(); // Ajout du plateau de jeu
 
 			// Attribuer un nom aux personnages
-			$player1->attribuerNom("Anozys");
-			$player2->attribuerNom("Canelle");
+			$joueur1->attribuerNom("Anozys");
+			$joueur2->attribuerNom("Natsu");
 
-			$player2->attack($player1);
+			?>
+
+			<div class="afficheAllActions">
+
+				<p class="actions">Actions effectuées</p>
+
+				<?php
+				// actions joueur
+
+					$joueur1->mouvementDroite();
+					$joueur1->mouvementDroite();
+					$joueur1->mouvementDroite();
+
+					$joueur1->mouvementBas();
+					$joueur1->mouvementBas();
+					$joueur1->mouvementBas();
+					$joueur1->mouvementBas();
+				?>
+			
+			</div>
 
 
-			$player1->afficheInfo();
-			$player2->afficheInfo();
 
+
+
+
+		
+
+
+
+		<!-- Affiche les stats -->
+		<div class="statistiquesPerso">
+			<div><?php $joueur1->afficheInfo(); ?></div>
+			<div><?php $joueur2->afficheInfo(); ?></div>
+		</div>
+
+		<?php
+
+			$grille->grilleDeJeu(12,12, $joueur1);
 		?>
 
 
