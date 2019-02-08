@@ -10,5 +10,38 @@ h2
 }
 
 /* ###################### */
+.lifeBar, .manaBar
+{
+	width: 250px;
+	height: 35px;
+	border: 1px solid black;
+	margin-bottom: 1%;
+	color: white;
+	font-weight: bold;
+	font-size: 1.6em;
+}
 
+.lifeBar > span, .manaBar >span
+{
+	display: inline-block;
+	position: relative;
+	top: -35px;
+	width: 100%;
+	height: 100%;
+	line-height: 35px;
+	text-align: center;
+}
 
+.lifeBar > div /* Jauge de vie */
+{
+	height: 100%;
+	width: 100%;
+	background-color: #BB0000;
+}
+
+.manaBar > div /* Jauge de mana */
+{
+	height: 100%;
+	width: 100%;
+	background-color: #2800B0;
+}

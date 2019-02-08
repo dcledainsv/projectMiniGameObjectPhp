@@ -17,14 +17,15 @@
 			$player1->attribuerNom("Anozys");
 			$player2->attribuerNom("Canelle");
 
+			$player2->attack($player1);
 
-			$player1->castBouleDeFeu($player2);
-			$player2->castEclaireDeGivre($player1);
 
 			$player1->afficheInfo();
 			$player2->afficheInfo();
 
-
 		?>
+
+
+		<script type="text/javascript" src="js/script.js"></script>
 	</body>
 </html>

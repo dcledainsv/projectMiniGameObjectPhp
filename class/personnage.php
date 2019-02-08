@@ -33,7 +33,7 @@
 			// Attaque simple
 				public function attack($cibleAttack) // Attaque au corps à corps
 				{
-					echo $this->_pseudo . " a attaqué " . $cibleAttack->_pseudo;
+					echo '<p>' . $this->_pseudo . " a attaqué " . $cibleAttack->_pseudo . '</p>';
 					$cibleAttack->_vieMax = $cibleAttack->_vieMax - 45;
 				}
 
@@ -63,9 +63,17 @@
 		public function afficheInfo()
 		{
 			echo "<h2>Statistiques de " . $this->_pseudo . "</h2>";
-			echo "Vie : " . $this->_vieMax . " / 600" . "<br />" ;
-			echo "Mana : " . $this->_manaMax . " / 360" . "<br />";
-			echo "Tu te situe aux coordonnées " . $this->_cooX . ";" . $this->_cooY . "<br />";
+			// Barre de vie
+			echo '<div class="lifeBar">';
+			echo '	<div id="jaugeVie"></div>';
+			echo '	<span>' . '<span id="vieActuelle">' . $this->_vieMax . '</span>' . ' / 600</span>';
+			echo '</div>';
+			// Barre de mana
+			echo '<div class="manaBar">';
+			echo '	<div id="jaugeMana"></div>';
+			echo '	<span>' . '<span id="manaActuelle">' . $this->_manaMax . '</span>' . ' / 360</span>';
+			echo '</div>';
+			echo "<p>Tu te situe aux coordonnées " . $this->_cooX . ";" . $this->_cooY . "</p><br />";
 			echo "<hr />";
 		}
 	}
